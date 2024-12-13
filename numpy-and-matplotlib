@@ -1,0 +1,24 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+speed = [99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86]
+x = np.mean(speed)
+print("Mean of speed is : " + str(x))
+
+y = np.median(speed)
+print("Median of speed is : " + str(y))
+
+z = np.sort(speed)
+print("Sorted speeds: ", z)
+print("Median of sorted speeds: ", np.median(z))
+print("Standard deviation: ", np.std(z))
+print("Variance: ", np.var(z))
+print("25th percentile: ", np.percentile(z, 25))
+
+a = np.random.uniform(0, 5, 10)
+
+plt.hist(a, bins=5)
+plt.show()
+
+b = np.random.uniform(0, 6, 5)
+print("Uniform random numbers between 0 and 6: " + str(b))
